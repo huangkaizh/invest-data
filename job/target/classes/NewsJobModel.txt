@@ -1,0 +1,23 @@
+﻿package com.wtime.data.job.news;
+import java.util.List;
+import org.springframework.stereotype.Component;
+import com.dangdang.ddframe.job.api.JobExecutionMultipleShardingContext;
+import com.dangdang.ddframe.job.plugin.job.type.simple.AbstractSimpleElasticJob;
+import com.wtime.data.common.utils.StringUtils;
+import com.wtime.data.core.model.News;
+import com.wtime.data.news.{News};
+@Component
+public class {News}Job extends AbstractSimpleElasticJob{
+	@Override
+	public void process(JobExecutionMultipleShardingContext context) {
+		int minute ;
+		String param = context.getJobParameter();
+		if(StringUtils.isEmpty(param)){
+			minute=20;
+		}else{
+			minute = StringUtils.parserInt(param);
+		}
+		List<News> newslist = {News}.news(minute);
+		{News}.savenews(newslist);
+	}
+}

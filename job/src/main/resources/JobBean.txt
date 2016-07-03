@@ -1,0 +1,10 @@
+﻿	<job:bean id="{News}Job"
+		class="com.wtime.data.job.news.{News}Job"
+		regCenter="regCenter" shardingTotalCount="10" 
+		jobParameter="20" 
+		cron="0 0/20 * * * ? " shardingItemParameters="0=A,1=B,2=C,3=D,4=E,5=F,6=G,7=H,8=I,9=J"
+		monitorExecution="true" failover="true"
+		processCountIntervalSeconds="10"
+		concurrentDataProcessThreadCount="3"
+		disabled="false"
+		overwrite="true" />
