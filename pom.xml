@@ -6,11 +6,6 @@
 	<artifactId>data</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<scm>
-		<connection>scm:git:git@github.com:huangkaizh/invest-data.git</connection>
-		<developerConnection>scm:git:git@github.com:huangkaizh/invest-data.git</developerConnection>
-		<url>https://github.com/huangkaizh/invest-data</url>
-	</scm>
 	<modules>
 		<module>claw</module>
 		<module>common</module>
